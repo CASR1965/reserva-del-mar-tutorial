@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Tutorial Front End del Condominio Reserva del Mar en Santa Marta, Colombia. Apartamentos, Pent-house, experiencias caribeñas y videos turísticos.">
+        content="Tutorial Front End del Condominio Reserva del Mar en Santa Marta, Colombia. Apartamentos, Pent-house y experiencias del Caribe colombiano."
+    >
 
     <meta
         name="keywords"
-        content="Condominio Reserva del Mar, Santa Marta, Caribe colombiano, playas de Santa Marta, apartamentos turísticos, Pent-house, tutorial Front End">
+        content="Condominio Reserva del Mar, Santa Marta, Caribe colombiano, playas de Santa Marta, apartamentos turísticos, Pent-house"
+    >
 
     <title>
-        Tutorial Front End · Condominio Reserva del Mar
+        Tutorial Front End | Condominio Reserva del Mar
     </title>
 
     <style>
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+           ===================================================== */
 
         * {
             box-sizing: border-box;
@@ -32,14 +38,23 @@
 
         body {
             margin: 0;
+            padding: 0;
+
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
+
             background: #f5f7fa;
             color: #222;
+
             line-height: 1.6;
         }
+
+
+        /* =====================================================
+           ENCABEZADO
+           ===================================================== */
 
         header {
             background:
@@ -48,46 +63,77 @@
                     #006994,
                     #00a8cc
                 );
-            color: white;
+
+            color: #ffffff;
+
             padding: 40px 20px;
+
             text-align: center;
         }
 
         header h1 {
-            margin: 0 0 10px;
+            margin:
+                0 0 10px;
+
             font-size: 2.2rem;
         }
 
         header p {
             margin: 5px auto;
+
             max-width: 900px;
         }
 
+
+        /* =====================================================
+           MENÚ
+           ===================================================== */
+
         nav {
             background: #ffffff;
-            border-bottom: 1px solid #ddd;
+
+            border-bottom:
+                1px solid #dddddd;
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.08);
         }
 
         nav ul {
             margin: 0;
-            padding: 10px 15px;
+
+            padding:
+                10px 15px;
+
             list-style: none;
+
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 8px;
         }
 
         nav a {
             display: block;
-            padding: 8px 12px;
+
+            padding:
+                8px 12px;
+
             color: #006994;
+
             text-decoration: none;
+
             font-weight: bold;
+
             border-radius: 6px;
         }
 
@@ -95,67 +141,134 @@
             background: #e8f6fa;
         }
 
+
+        /* =====================================================
+           CONTENIDO PRINCIPAL
+           ===================================================== */
+
         main {
-            width: min(1200px, 94%);
-            margin: 30px auto;
+            width:
+                min(1200px, 94%);
+
+            margin:
+                30px auto;
         }
 
+
+        /* =====================================================
+           SECCIONES
+           ===================================================== */
+
         .tema {
-            background: white;
+            background: #ffffff;
+
             margin-bottom: 30px;
+
             padding: 25px;
+
             border-radius: 14px;
+
             box-shadow:
                 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .tema h2 {
             color: #006994;
+
             margin-top: 0;
-            border-bottom: 2px solid #00a8cc;
+
+            border-bottom:
+                2px solid #00a8cc;
+
             padding-bottom: 8px;
         }
 
+
+        /* =====================================================
+           GALERÍA DE VIDEOS
+           ===================================================== */
+
         .galeria-videos {
             display: grid;
+
             grid-template-columns:
                 repeat(
                     auto-fit,
                     minmax(280px, 1fr)
                 );
+
             gap: 24px;
+
             margin-top: 20px;
         }
 
+
+        /* =====================================================
+           TARJETA DE VIDEO
+           ===================================================== */
+
         .video-card {
-            background: #fff;
+            background: #ffffff;
+
             border-radius: 12px;
+
             overflow: hidden;
+
             box-shadow:
                 0 3px 12px rgba(0,0,0,0.12);
         }
 
+
+        /* =====================================================
+           CONTENEDOR DE VIDEO
+           ===================================================== */
+
         .video-contenedor {
             width: 100%;
+
             aspect-ratio: 16 / 9;
-            background: #111;
+
+            background: #111111;
+
             overflow: hidden;
+
             position: relative;
         }
 
+
+        /* =====================================================
+           IFRAMES
+           ===================================================== */
+
         .video-contenedor iframe {
             width: 100%;
+
             height: 100%;
+
             border: 0;
+
             display: block;
         }
 
+
+        /* =====================================================
+           MINIATURAS
+           ===================================================== */
+
         .video-contenedor img {
             display: block;
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
         }
+
+
+        /* =====================================================
+           INFORMACIÓN DEL VIDEO
+           ===================================================== */
 
         .video-info {
             padding: 15px;
@@ -164,17 +277,21 @@
         .video-info h3 {
             margin:
                 0 0 5px;
+
             color: #006994;
         }
 
         .video-info p {
             margin: 0;
-            color: #555;
+
+            color: #555555;
         }
 
         .video-info a {
             color: #d60000;
+
             font-weight: bold;
+
             text-decoration: none;
         }
 
@@ -182,25 +299,45 @@
             text-decoration: underline;
         }
 
+
+        /* =====================================================
+           BOTÓN ROJO DE YOUTUBE
+           ===================================================== */
+
         .youtube-link {
             position: absolute;
+
             top: 50%;
+
             left: 50%;
+
             transform:
                 translate(-50%, -50%);
+
             width: 68px;
+
             height: 48px;
+
             background:
                 rgba(255, 0, 0, 0.92);
+
             border-radius: 14px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            color: #fff;
+
+            color: #ffffff;
+
             font-size: 28px;
+
             line-height: 1;
+
             box-shadow:
                 0 4px 12px rgba(0,0,0,0.35);
+
             transition:
                 transform 0.2s ease,
                 background 0.2s ease;
@@ -210,30 +347,57 @@
             transform:
                 translate(-50%, -50%)
                 scale(1.08);
+
             background:
                 rgba(255, 0, 0, 1);
         }
 
+
+        /* =====================================================
+           IMAGEN PRINCIPAL
+           ===================================================== */
+
         .imagen-principal {
             width: 100%;
+
             max-width: 1000px;
+
             display: block;
-            margin: 20px auto;
+
+            margin:
+                20px auto;
+
             border-radius: 12px;
         }
 
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
         footer {
             margin-top: 40px;
-            padding: 30px 20px;
+
+            padding:
+                30px 20px;
+
             background: #003f52;
-            color: white;
+
+            color: #ffffff;
+
             text-align: center;
         }
 
         footer a {
-            color: white;
+            color: #ffffff;
+
             font-weight: bold;
         }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
 
         @media (max-width: 700px) {
 
@@ -247,7 +411,9 @@
 
             nav ul {
                 justify-content: flex-start;
+
                 overflow-x: auto;
+
                 flex-wrap: nowrap;
             }
 
@@ -257,7 +423,13 @@
 
 </head>
 
+
 <body>
+
+
+<!-- =========================================================
+     ENCABEZADO
+     ========================================================= -->
 
 <header>
 
@@ -267,7 +439,9 @@
 
     <p>
         Preguntas frecuentes sobre
-        <strong>Condominio Reserva del Mar</strong>
+        <strong>
+            Condominio Reserva del Mar
+        </strong>
     </p>
 
     <p>
@@ -276,6 +450,10 @@
 
 </header>
 
+
+<!-- =========================================================
+     MENÚ PRINCIPAL
+     ========================================================= -->
 
 <nav>
 
@@ -310,7 +488,12 @@
 </nav>
 
 
+<!-- =========================================================
+     CONTENIDO
+     ========================================================= -->
+
 <main id="inicio">
+
 
     <!-- =====================================================
          INTRODUCCIÓN
@@ -324,9 +507,11 @@
 
         <p>
             Bienvenido al tutorial Front End del
-            <strong>Condominio Reserva del Mar</strong>,
-            ubicado en Playa Salguero, Santa Marta,
-            Colombia.
+            <strong>
+                Condominio Reserva del Mar
+            </strong>,
+            ubicado en Playa Salguero,
+            Santa Marta, Colombia.
         </p>
 
         <p>
@@ -338,7 +523,9 @@
 
         <p>
             Disfruta de las
-            <strong>playas de Santa Marta</strong>,
+            <strong>
+                playas de Santa Marta
+            </strong>,
             el mar Caribe, actividades acuáticas,
             cultura caribeña y los espacios del
             Condominio Reserva del Mar.
@@ -348,7 +535,7 @@
 
 
     <!-- =====================================================
-         APARTAMENTO
+         6. APARTAMENTO DE 1 HABITACIÓN
          ===================================================== -->
 
     <section
@@ -369,47 +556,63 @@
         <div class="galeria-videos">
 
 
-            <!-- =============================================
+            <!-- =================================================
                  APARTAMENTO · VIDEO 1
-                 Miniatura porque el iframe puede presentar
-                 restricciones de reproducción.
-                 ============================================= -->
+
+                 ID:
+                 7pTMYXZ51zs
+
+                 SE UTILIZA MINIATURA + YOUTUBE
+                 PARA EVITAR PROBLEMAS DE EMBED.
+                 ================================================= -->
 
             <article class="video-card">
 
                 <div
                     class="video-contenedor"
-                    style="position:relative; overflow:hidden;">
+                    style="
+                        position:relative;
+                        overflow:hidden;
+                    "
+                >
 
                     <a
                         href="https://www.youtube.com/watch?v=7pTMYXZ51zs"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver video del apartamento de una habitación en YouTube"
+                        aria-label="
+                            Ver video del apartamento
+                            de una habitación
+                            en YouTube
+                        "
                         style="
                             display:block;
                             position:relative;
                             width:100%;
                             height:100%;
-                        ">
+                        "
+                    >
 
                         <img
                             src="https://img.youtube.com/vi/7pTMYXZ51zs/hqdefault.jpg"
-                            alt="Apartamento de una habitación de Reserva del Mar"
+                            alt="
+                                Apartamento de una habitación
+                                de Reserva del Mar
+                            "
                             loading="lazy"
                             style="
                                 display:block;
                                 width:100%;
                                 height:100%;
                                 object-fit:cover;
-                            ">
+                            "
+                        >
 
                         <span
                             class="youtube-link"
-                            aria-hidden="true">
-
+                            aria-hidden="true"
+                        >
                             ▶
-
                         </span>
 
                     </a>
@@ -430,10 +633,9 @@
                         <a
                             href="https://www.youtube.com/watch?v=7pTMYXZ51zs"
                             target="_blank"
-                            rel="noopener noreferrer">
-
+                            rel="noopener noreferrer"
+                        >
                             Ver en YouTube ↗
-
                         </a>
 
                     </p>
@@ -449,7 +651,7 @@
 
 
     <!-- =====================================================
-         PENT-HOUSE
+         7. PENT-HOUSE
          ===================================================== -->
 
     <section
@@ -469,16 +671,24 @@
         <div class="galeria-videos">
 
 
-            <!-- =============================================
+            <!-- =================================================
                  PENT-HOUSE
-                 
+
+                 ID:
+                 qVua2qhUG0E
+
                  IMPORTANTE:
-                 NO usamos iframe.
-                 
-                 Se utiliza miniatura de YouTube + botón
-                 rojo para evitar la pantalla negra causada
-                 por las restricciones del video embebido.
-                 ============================================= -->
+                 NO SE UTILIZA IFRAME.
+
+                 SE UTILIZA:
+                 MINIATURA DE YOUTUBE
+                 +
+                 BOTÓN ROJO
+                 +
+                 ENLACE DIRECTO A YOUTUBE.
+
+                 ESTO EVITA LA PANTALLA NEGRA.
+                 ================================================= -->
 
             <article class="video-card">
 
@@ -487,38 +697,46 @@
                     style="
                         position:relative;
                         overflow:hidden;
-                    ">
+                    "
+                >
 
                     <a
                         href="https://www.youtube.com/watch?v=qVua2qhUG0E"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver video del Pent-house de Reserva del Mar en YouTube"
+                        aria-label="
+                            Ver video del Pent-house
+                            de Reserva del Mar
+                            en YouTube
+                        "
                         style="
                             display:block;
                             position:relative;
                             width:100%;
                             height:100%;
-                        ">
+                        "
+                    >
 
                         <img
                             src="https://img.youtube.com/vi/qVua2qhUG0E/hqdefault.jpg"
-                            alt="Miniatura del Pent-house de Reserva del Mar"
+                            alt="
+                                Miniatura del Pent-house
+                                de Reserva del Mar
+                            "
                             loading="lazy"
                             style="
                                 display:block;
                                 width:100%;
                                 height:100%;
                                 object-fit:cover;
-                            ">
-
+                            "
+                        >
 
                         <span
                             class="youtube-link"
-                            aria-hidden="true">
-
+                            aria-hidden="true"
+                        >
                             ▶
-
                         </span>
 
                     </a>
@@ -539,10 +757,9 @@
                         <a
                             href="https://youtube.com/shorts/qVua2qhUG0E"
                             target="_blank"
-                            rel="noopener noreferrer">
-
+                            rel="noopener noreferrer"
+                        >
                             Ver en YouTube ↗
-
                         </a>
 
                     </p>
@@ -558,7 +775,7 @@
 
 
     <!-- =====================================================
-         EXPERIENCIA CARIBEÑA
+         8. EXPERIENCIA CARIBEÑA
          ===================================================== -->
 
     <section
@@ -579,17 +796,25 @@
         <div class="galeria-videos">
 
 
-            <!-- =============================================
+            <!-- =================================================
                  EXPERIENCIA CARIBEÑA · VIDEO 1
-                 ============================================= -->
+
+                 ID:
+                 _KM37beG0LA
+                 ================================================= -->
 
             <article class="video-card">
 
-                <div class="video-contenedor">
+                <div
+                    class="video-contenedor"
+                >
 
                     <iframe
                         src="https://www.youtube.com/embed/_KM37beG0LA?rel=0"
-                        title="Experiencia caribeña · Video 1"
+                        title="
+                            Experiencia caribeña
+                            · Video 1
+                        "
                         loading="lazy"
                         allow="
                             accelerometer;
@@ -600,8 +825,11 @@
                             picture-in-picture;
                             web-share
                         "
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
+                        referrerpolicy="
+                            strict-origin-when-cross-origin
+                        "
+                        allowfullscreen
+                    >
                     </iframe>
 
                 </div>
@@ -622,10 +850,14 @@
             </article>
 
 
-            <!-- =============================================
+            <!-- =================================================
                  EXPERIENCIA CARIBEÑA · VIDEO 2
-                 Miniatura + enlace
-                 ============================================= -->
+
+                 ID:
+                 2r7CyYBTu-I
+
+                 MINIATURA + BOTÓN
+                 ================================================= -->
 
             <article class="video-card">
 
@@ -634,37 +866,46 @@
                     style="
                         position:relative;
                         overflow:hidden;
-                    ">
+                    "
+                >
 
                     <a
                         href="https://www.youtube.com/watch?v=2r7CyYBTu-I"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver experiencia caribeña video 2 en YouTube"
+                        aria-label="
+                            Ver experiencia caribeña
+                            video 2
+                            en YouTube
+                        "
                         style="
                             display:block;
                             position:relative;
                             width:100%;
                             height:100%;
-                        ">
+                        "
+                    >
 
                         <img
                             src="https://img.youtube.com/vi/2r7CyYBTu-I/hqdefault.jpg"
-                            alt="Experiencia caribeña de Reserva del Mar"
+                            alt="
+                                Experiencia caribeña
+                                de Reserva del Mar
+                            "
                             loading="lazy"
                             style="
                                 display:block;
                                 width:100%;
                                 height:100%;
                                 object-fit:cover;
-                            ">
+                            "
+                        >
 
                         <span
                             class="youtube-link"
-                            aria-hidden="true">
-
+                            aria-hidden="true"
+                        >
                             ▶
-
                         </span>
 
                     </a>
@@ -685,10 +926,9 @@
                         <a
                             href="https://youtube.com/shorts/2r7CyYBTu-I"
                             target="_blank"
-                            rel="noopener noreferrer">
-
+                            rel="noopener noreferrer"
+                        >
                             Ver en YouTube ↗
-
                         </a>
 
                     </p>
@@ -698,17 +938,25 @@
             </article>
 
 
-            <!-- =============================================
+            <!-- =================================================
                  EXPERIENCIA CARIBEÑA · VIDEO 3
-                 ============================================= -->
+
+                 ID:
+                 2H6zIdodgD0
+                 ================================================= -->
 
             <article class="video-card">
 
-                <div class="video-contenedor">
+                <div
+                    class="video-contenedor"
+                >
 
                     <iframe
                         src="https://www.youtube.com/embed/2H6zIdodgD0?rel=0"
-                        title="Experiencia caribeña · Video 3"
+                        title="
+                            Experiencia caribeña
+                            · Video 3
+                        "
                         loading="lazy"
                         allow="
                             accelerometer;
@@ -719,8 +967,11 @@
                             picture-in-picture;
                             web-share
                         "
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
+                        referrerpolicy="
+                            strict-origin-when-cross-origin
+                        "
+                        allowfullscreen
+                    >
                     </iframe>
 
                 </div>
@@ -758,8 +1009,8 @@
 
         <p>
             El Condominio Reserva del Mar está ubicado
-            en Playa Salguero, Santa Marta, Magdalena,
-            Colombia.
+            en Playa Salguero, Santa Marta,
+            Magdalena, Colombia.
         </p>
 
         <p>
@@ -782,21 +1033,21 @@
             <a
                 href="https://wa.me/573138902136"
                 target="_blank"
-                rel="noopener noreferrer">
-
+                rel="noopener noreferrer"
+            >
                 +57 313 890 2136
-
             </a>
 
         </p>
 
     </section>
 
+
 </main>
 
 
 <!-- =========================================================
-     FOOTER
+     PIE DE PÁGINA
      ========================================================= -->
 
 <footer>
@@ -817,10 +1068,9 @@
         <a
             href="https://wa.me/573138902136"
             target="_blank"
-            rel="noopener noreferrer">
-
+            rel="noopener noreferrer"
+        >
             WhatsApp +57 313 890 2136
-
         </a>
 
     </p>
