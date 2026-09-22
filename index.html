@@ -1,1086 +1,1414 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Tutorial Front End del Condominio Reserva del Mar en Santa Marta, Colombia. Apartamentos, Pent-house y experiencias del Caribe colombiano."
-    >
+    <meta name="description"
+        content="Preguntas frecuentes, videos y experiencias del Condominio Reserva del Mar en Playa Salguero, Santa Marta, Caribe colombiano.">
 
-    <meta
-        name="keywords"
-        content="Condominio Reserva del Mar, Santa Marta, Caribe colombiano, playas de Santa Marta, apartamentos turísticos, Pent-house"
-    >
+    <meta name="keywords"
+        content="Condominio Reserva del Mar, Santa Marta, Caribe colombiano, playas de Santa Marta, apartamentos frente al mar, Playa Salguero, turismo Santa Marta">
 
-    <title>
-        Tutorial Front End | Condominio Reserva del Mar
-    </title>
+    <meta name="author" content="Carlos Augusto Suárez Rodríguez">
 
-    <style>
+    <meta name="robots" content="index, follow">
 
-        /* =====================================================
-           CONFIGURACIÓN GENERAL
-           ===================================================== */
+    <meta name="theme-color" content="#0b3d5c">
 
-        * {
-            box-sizing: border-box;
-        }
+    <title>Preguntas frecuentes | Condominio Reserva del Mar</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background: #f5f7fa;
-            color: #222;
-
-            line-height: 1.6;
-        }
-
-
-        /* =====================================================
-           ENCABEZADO
-           ===================================================== */
-
-        header {
-            background:
-                linear-gradient(
-                    135deg,
-                    #006994,
-                    #00a8cc
-                );
-
-            color: #ffffff;
-
-            padding: 40px 20px;
-
-            text-align: center;
-        }
-
-        header h1 {
-            margin:
-                0 0 10px;
-
-            font-size: 2.2rem;
-        }
-
-        header p {
-            margin: 5px auto;
-
-            max-width: 900px;
-        }
-
-
-        /* =====================================================
-           MENÚ
-           ===================================================== */
-
-        nav {
-            background: #ffffff;
-
-            border-bottom:
-                1px solid #dddddd;
-
-            position: sticky;
-
-            top: 0;
-
-            z-index: 1000;
-
-            box-shadow:
-                0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        nav ul {
-            margin: 0;
-
-            padding:
-                10px 15px;
-
-            list-style: none;
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
-
-            gap: 8px;
-        }
-
-        nav a {
-            display: block;
-
-            padding:
-                8px 12px;
-
-            color: #006994;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            border-radius: 6px;
-        }
-
-        nav a:hover {
-            background: #e8f6fa;
-        }
-
-
-        /* =====================================================
-           CONTENIDO PRINCIPAL
-           ===================================================== */
-
-        main {
-            width:
-                min(1200px, 94%);
-
-            margin:
-                30px auto;
-        }
-
-
-        /* =====================================================
-           SECCIONES
-           ===================================================== */
-
-        .tema {
-            background: #ffffff;
-
-            margin-bottom: 30px;
-
-            padding: 25px;
-
-            border-radius: 14px;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.08);
-        }
-
-        .tema h2 {
-            color: #006994;
-
-            margin-top: 0;
-
-            border-bottom:
-                2px solid #00a8cc;
-
-            padding-bottom: 8px;
-        }
-
-
-        /* =====================================================
-           GALERÍA DE VIDEOS
-           ===================================================== */
-
-        .galeria-videos {
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(280px, 1fr)
-                );
-
-            gap: 24px;
-
-            margin-top: 20px;
-        }
-
-
-        /* =====================================================
-           TARJETA DE VIDEO
-           ===================================================== */
-
-        .video-card {
-            background: #ffffff;
-
-            border-radius: 12px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 3px 12px rgba(0,0,0,0.12);
-        }
-
-
-        /* =====================================================
-           CONTENEDOR DE VIDEO
-           ===================================================== */
-
-        .video-contenedor {
-            width: 100%;
-
-            aspect-ratio: 16 / 9;
-
-            background: #111111;
-
-            overflow: hidden;
-
-            position: relative;
-        }
-
-
-        /* =====================================================
-           IFRAMES
-           ===================================================== */
-
-        .video-contenedor iframe {
-            width: 100%;
-
-            height: 100%;
-
-            border: 0;
-
-            display: block;
-        }
-
-
-        /* =====================================================
-           MINIATURAS
-           ===================================================== */
-
-        .video-contenedor img {
-            display: block;
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-        }
-
-
-        /* =====================================================
-           INFORMACIÓN DEL VIDEO
-           ===================================================== */
-
-        .video-info {
-            padding: 15px;
-        }
-
-        .video-info h3 {
-            margin:
-                0 0 5px;
-
-            color: #006994;
-        }
-
-        .video-info p {
-            margin: 0;
-
-            color: #555555;
-        }
-
-        .video-info a {
-            color: #d60000;
-
-            font-weight: bold;
-
-            text-decoration: none;
-        }
-
-        .video-info a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =====================================================
-           BOTÓN ROJO DE YOUTUBE
-           ===================================================== */
-
-        .youtube-link {
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            transform:
-                translate(-50%, -50%);
-
-            width: 68px;
-
-            height: 48px;
-
-            background:
-                rgba(255, 0, 0, 0.92);
-
-            border-radius: 14px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: #ffffff;
-
-            font-size: 28px;
-
-            line-height: 1;
-
-            box-shadow:
-                0 4px 12px rgba(0,0,0,0.35);
-
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease;
-        }
-
-        .youtube-link:hover {
-            transform:
-                translate(-50%, -50%)
-                scale(1.08);
-
-            background:
-                rgba(255, 0, 0, 1);
-        }
-
-
-        /* =====================================================
-           IMAGEN PRINCIPAL
-           ===================================================== */
-
-        .imagen-principal {
-            width: 100%;
-
-            max-width: 1000px;
-
-            display: block;
-
-            margin:
-                20px auto;
-
-            border-radius: 12px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-           ===================================================== */
-
-        footer {
-            margin-top: 40px;
-
-            padding:
-                30px 20px;
-
-            background: #003f52;
-
-            color: #ffffff;
-
-            text-align: center;
-        }
-
-        footer a {
-            color: #ffffff;
-
-            font-weight: bold;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-           ===================================================== */
-
-        @media (max-width: 700px) {
-
-            header h1 {
-                font-size: 1.7rem;
-            }
-
-            .tema {
-                padding: 18px;
-            }
-
-            nav ul {
-                justify-content: flex-start;
-
-                overflow-x: auto;
-
-                flex-wrap: nowrap;
-            }
-
-        }
-
-    </style>
-
+    <!-- CSS LOCAL - GITHUB PAGES -->
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
-
 
 <body>
 
+    <!-- =====================================================
+         BARRA SUPERIOR
+         ===================================================== -->
+    <div class="barra-superior">
 
-<!-- =========================================================
-     ENCABEZADO
-     ========================================================= -->
-
-<header>
-
-    <h1>
-        Tutorial Front End
-    </h1>
-
-    <p>
-        Preguntas frecuentes sobre
-        <strong>
-            Condominio Reserva del Mar
-        </strong>
-    </p>
-
-    <p>
-        Santa Marta, Colombia · Caribe colombiano
-    </p>
-
-</header>
-
-
-<!-- =========================================================
-     MENÚ PRINCIPAL
-     ========================================================= -->
-
-<nav>
-
-    <ul>
-
-        <li>
-            <a href="#inicio">
-                Inicio
+        <p>
+            💬 ¿Buscas apartamentos frente al mar en Santa Marta?
+            <a href="https://wa.me/573138902136"
+               target="_blank"
+               rel="noopener noreferrer">
+                Reserva por WhatsApp
             </a>
-        </li>
+        </p>
 
-        <li>
-            <a href="#apartamento">
-                Apartamento
-            </a>
-        </li>
-
-        <li>
-            <a href="#penthouse">
-                Pent-house
-            </a>
-        </li>
-
-        <li>
-            <a href="#experiencia-caribena">
-                Experiencia caribeña
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
-
-<!-- =========================================================
-     CONTENIDO
-     ========================================================= -->
-
-<main id="inicio">
+    </div>
 
 
     <!-- =====================================================
-         INTRODUCCIÓN
+         ENCABEZADO
          ===================================================== -->
+    <header class="encabezado">
 
-    <section class="tema">
+        <div class="banner">
 
-        <h2>
-            Condominio Reserva del Mar
-        </h2>
+            <img
+                class="banner-image"
+                src="https://reservadelmar.lovable.app/lovable-uploads/1155e6d3-ff24-46cc-980d-280cfe4f4b35.webp"
+                alt="Condominio Reserva del Mar en Santa Marta, Colombia"
+                loading="eager">
 
-        <p>
-            Bienvenido al tutorial Front End del
-            <strong>
-                Condominio Reserva del Mar
-            </strong>,
-            ubicado en Playa Salguero,
-            Santa Marta, Colombia.
-        </p>
+            <div class="banner-contenido">
 
-        <p>
-            Este espacio presenta información visual
-            mediante fotografías y videos relacionados
-            con los apartamentos, Pent-house y
-            experiencias del Caribe colombiano.
-        </p>
+                <p class="etiqueta">
+                    TUTORIAL FRONT END
+                </p>
 
-        <p>
-            Disfruta de las
-            <strong>
-                playas de Santa Marta
-            </strong>,
-            el mar Caribe, actividades acuáticas,
-            cultura caribeña y los espacios del
-            Condominio Reserva del Mar.
-        </p>
+                <h1>
+                    Preguntas frecuentes sobre el Condominio Reserva del Mar
+                </h1>
 
-    </section>
+                <p class="subtitulo">
+                    Santa Marta, Colombia · Caribe colombiano
+                </p>
+
+            </div>
+
+            <img
+                class="logo-banner"
+                src="static/images/logo-reserva-del-mar.jpeg"
+                alt="Logo Condominio Reserva del Mar"
+                loading="eager">
+
+        </div>
+
+    </header>
 
 
     <!-- =====================================================
-         6. APARTAMENTO DE 1 HABITACIÓN
+         CONTENIDO PRINCIPAL
          ===================================================== -->
-
-    <section
-        id="apartamento"
-        class="tema">
-
-        <h2>
-            6. Apartamento de 1 habitación
-        </h2>
-
-        <p>
-            Consulte los videos relacionados con el
-            apartamento de una habitación de
-            Reserva del Mar.
-        </p>
+    <main class="contenedor">
 
 
-        <div class="galeria-videos">
+        <!-- =================================================
+             INTRODUCCIÓN
+             ================================================= -->
+        <section class="introduccion">
+
+            <h2>
+                Tutorial Front End
+            </h2>
+
+            <p>
+                Este tutorial presenta información organizada sobre
+                algunos de los temas y preguntas que pueden realizar
+                los clientes interesados en el Condominio Reserva del
+                Mar en Santa Marta, Colombia.
+            </p>
+
+            <p>
+                La página integra HTML, CSS y JavaScript utilizando
+                Python con Flask para ejecutar el proyecto web.
+            </p>
+
+            <p>
+                Reserva del Mar está ubicado en Playa Salguero,
+                dentro del Caribe colombiano, en un entorno asociado
+                con las playas de Santa Marta y la experiencia
+                turística de la ciudad.
+            </p>
+
+        </section>
 
 
-            <!-- =================================================
-                 APARTAMENTO · VIDEO 1
+        <!-- =================================================
+             ÍNDICE
+             ================================================= -->
+        <section class="indice">
 
-                 ID:
-                 7pTMYXZ51zs
+            <h2>
+                Contenido del tutorial
+            </h2>
 
-                 SE UTILIZA MINIATURA + YOUTUBE
-                 PARA EVITAR PROBLEMAS DE EMBED.
-                 ================================================= -->
+            <ol>
 
-            <article class="video-card">
-
-                <div
-                    class="video-contenedor"
-                    style="
-                        position:relative;
-                        overflow:hidden;
-                    "
-                >
-
-                    <a
-                        href="https://www.youtube.com/watch?v=7pTMYXZ51zs"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="
-                            Ver video del apartamento
-                            de una habitación
-                            en YouTube
-                        "
-                        style="
-                            display:block;
-                            position:relative;
-                            width:100%;
-                            height:100%;
-                        "
-                    >
-
-                        <img
-                            src="https://img.youtube.com/vi/7pTMYXZ51zs/hqdefault.jpg"
-                            alt="
-                                Apartamento de una habitación
-                                de Reserva del Mar
-                            "
-                            loading="lazy"
-                            style="
-                                display:block;
-                                width:100%;
-                                height:100%;
-                                object-fit:cover;
-                            "
-                        >
-
-                        <span
-                            class="youtube-link"
-                            aria-hidden="true"
-                        >
-                            ▶
-                        </span>
-
+                <li>
+                    <a href="#video-oficial">
+                        Video oficial del Condominio
                     </a>
+                </li>
 
-                </div>
+                <li>
+                    <a href="#experiencias">
+                        Experiencias en Reserva del Mar
+                    </a>
+                </li>
 
-
-                <div class="video-info">
-
-                    <h3>
+                <li>
+                    <a href="#apartamento-1">
                         Apartamento de 1 habitación
-                    </h3>
-
-                    <p>
-
-                        Reserva del Mar ·
-
-                        <a
-                            href="https://www.youtube.com/watch?v=7pTMYXZ51zs"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Ver en YouTube ↗
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         7. PENT-HOUSE
-         ===================================================== -->
-
-    <section
-        id="penthouse"
-        class="tema">
-
-        <h2>
-            7. Pent-house
-        </h2>
-
-        <p>
-            Consulte el video del Pent-house de
-            Reserva del Mar.
-        </p>
-
-
-        <div class="galeria-videos">
-
-
-            <!-- =================================================
-                 PENT-HOUSE
-
-                 ID:
-                 qVua2qhUG0E
-
-                 IMPORTANTE:
-                 NO SE UTILIZA IFRAME.
-
-                 SE UTILIZA:
-                 MINIATURA DE YOUTUBE
-                 +
-                 BOTÓN ROJO
-                 +
-                 ENLACE DIRECTO A YOUTUBE.
-
-                 ESTO EVITA LA PANTALLA NEGRA.
-                 ================================================= -->
-
-            <article class="video-card">
-
-                <div
-                    class="video-contenedor"
-                    style="
-                        position:relative;
-                        overflow:hidden;
-                    "
-                >
-
-                    <a
-                        href="https://www.youtube.com/watch?v=qVua2qhUG0E"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="
-                            Ver video del Pent-house
-                            de Reserva del Mar
-                            en YouTube
-                        "
-                        style="
-                            display:block;
-                            position:relative;
-                            width:100%;
-                            height:100%;
-                        "
-                    >
-
-                        <img
-                            src="https://img.youtube.com/vi/qVua2qhUG0E/hqdefault.jpg"
-                            alt="
-                                Miniatura del Pent-house
-                                de Reserva del Mar
-                            "
-                            loading="lazy"
-                            style="
-                                display:block;
-                                width:100%;
-                                height:100%;
-                                object-fit:cover;
-                            "
-                        >
-
-                        <span
-                            class="youtube-link"
-                            aria-hidden="true"
-                        >
-                            ▶
-                        </span>
-
                     </a>
+                </li>
 
-                </div>
+                <li>
+                    <a href="#apartamento-2">
+                        Apartamento de 2 habitaciones
+                    </a>
+                </li>
 
+                <li>
+                    <a href="#apartamento-3">
+                        Apartamento de 3 habitaciones
+                    </a>
+                </li>
 
-                <div class="video-info">
+                <li>
+                    <a href="#apartamento-4">
+                        Apartamento de 4 habitaciones
+                    </a>
+                </li>
 
-                    <h3>
+                <li>
+                    <a href="#penthouse">
                         Pent-house
-                    </h3>
-
-                    <p>
-
-                        Reserva del Mar ·
-
-                        <a
-                            href="https://youtube.com/shorts/qVua2qhUG0E"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Ver en YouTube ↗
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         8. EXPERIENCIA CARIBEÑA
-         ===================================================== -->
-
-    <section
-        id="experiencia-caribena"
-        class="tema">
-
-        <h2>
-            8. Experiencia caribeña
-        </h2>
-
-        <p>
-            Videos relacionados con la experiencia
-            turística del Caribe colombiano y
-            Reserva del Mar.
-        </p>
-
-
-        <div class="galeria-videos">
-
-
-            <!-- =================================================
-                 EXPERIENCIA CARIBEÑA · VIDEO 1
-
-                 ID:
-                 _KM37beG0LA
-                 ================================================= -->
-
-            <article class="video-card">
-
-                <div
-                    class="video-contenedor"
-                >
-
-                    <iframe
-                        src="https://www.youtube.com/embed/_KM37beG0LA?rel=0"
-                        title="
-                            Experiencia caribeña
-                            · Video 1
-                        "
-                        loading="lazy"
-                        allow="
-                            accelerometer;
-                            autoplay;
-                            clipboard-write;
-                            encrypted-media;
-                            gyroscope;
-                            picture-in-picture;
-                            web-share
-                        "
-                        referrerpolicy="
-                            strict-origin-when-cross-origin
-                        "
-                        allowfullscreen
-                    >
-                    </iframe>
-
-                </div>
-
-
-                <div class="video-info">
-
-                    <h3>
-                        Experiencia caribeña
-                    </h3>
-
-                    <p>
-                        Video 1
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 EXPERIENCIA CARIBEÑA · VIDEO 2
-
-                 ID:
-                 2r7CyYBTu-I
-
-                 MINIATURA + BOTÓN
-                 ================================================= -->
-
-            <article class="video-card">
-
-                <div
-                    class="video-contenedor"
-                    style="
-                        position:relative;
-                        overflow:hidden;
-                    "
-                >
-
-                    <a
-                        href="https://www.youtube.com/watch?v=2r7CyYBTu-I"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="
-                            Ver experiencia caribeña
-                            video 2
-                            en YouTube
-                        "
-                        style="
-                            display:block;
-                            position:relative;
-                            width:100%;
-                            height:100%;
-                        "
-                    >
-
-                        <img
-                            src="https://img.youtube.com/vi/2r7CyYBTu-I/hqdefault.jpg"
-                            alt="
-                                Experiencia caribeña
-                                de Reserva del Mar
-                            "
-                            loading="lazy"
-                            style="
-                                display:block;
-                                width:100%;
-                                height:100%;
-                                object-fit:cover;
-                            "
-                        >
-
-                        <span
-                            class="youtube-link"
-                            aria-hidden="true"
-                        >
-                            ▶
-                        </span>
-
                     </a>
+                </li>
 
-                </div>
+                <li>
+                    <a href="#sol-radiante">
+                        Sol radiante
+                    </a>
+                </li>
 
-
-                <div class="video-info">
-
-                    <h3>
+                <li>
+                    <a href="#experiencia-caribena">
                         Experiencia caribeña
-                    </h3>
+                    </a>
+                </li>
 
-                    <p>
+                <li>
+                    <a href="#playas">
+                        Playas de arena blanca
+                    </a>
+                </li>
 
-                        Video 2 ·
+                <li>
+                    <a href="#aventuras">
+                        Aventuras acuáticas
+                    </a>
+                </li>
 
-                        <a
-                            href="https://youtube.com/shorts/2r7CyYBTu-I"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Ver en YouTube ↗
-                        </a>
+            </ol>
 
-                    </p>
-
-                </div>
-
-            </article>
+        </section>
 
 
-            <!-- =================================================
-                 EXPERIENCIA CARIBEÑA · VIDEO 3
+        <!-- =================================================
+             1. VIDEO OFICIAL
+             ================================================= -->
+        <section id="video-oficial" class="tema">
 
-                 ID:
-                 2H6zIdodgD0
-                 ================================================= -->
+            <h2>
+                1. Video oficial del Condominio
+            </h2>
 
-            <article class="video-card">
+            <p>
+                Conozca diferentes espacios y características del
+                Condominio Reserva del Mar en Santa Marta.
+            </p>
 
-                <div
-                    class="video-contenedor"
-                >
+            <div class="galeria-videos">
 
-                    <iframe
-                        src="https://www.youtube.com/embed/2H6zIdodgD0?rel=0"
-                        title="
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="hIJQkULq0y8">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/hIJQkULq0y8?rel=0"
+                            title="Video oficial del Condominio Reserva del Mar"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Video oficial
+                        </h3>
+
+                        <p>
+                            Conoce el Condominio Reserva del Mar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             2. EXPERIENCIAS
+             ================================================= -->
+        <section id="experiencias" class="tema">
+
+            <h2>
+                2. Experiencias en Reserva del Mar
+            </h2>
+
+            <p>
+                Experiencias relacionadas con la estancia y el entorno
+                del Condominio Reserva del Mar.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="9sAzMykjiVI">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/9sAzMykjiVI?rel=0"
+                            title="Experiencias en Reserva del Mar"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Experiencias
+                        </h3>
+
+                        <p>
+                            Descubre experiencias en Reserva del Mar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             3. APARTAMENTO 1 HABITACIÓN
+             ================================================= -->
+        <section id="apartamento-1" class="tema">
+
+            <h2>
+                3. Apartamento de 1 habitación
+            </h2>
+
+            <p>
+                Consulte los videos correspondientes a los
+                apartamentos de una habitación.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="7pTMYXZ51zs">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/7pTMYXZ51zs?rel=0"
+                            title="Apartamento de 1 habitación - Video 1"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 1 habitación
+                        </h3>
+
+                        <p>
+                            Video 1 ·
+                            <a
+                                href="https://youtube.com/shorts/7pTMYXZ51zs"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Ver en YouTube ↗
+                            </a>
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="lx-r1Daiuz0">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/lx-r1Daiuz0?rel=0"
+                            title="Apartamento de 1 habitación - Video 2"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 1 habitación
+                        </h3>
+
+                        <p>
+                            Video 2
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             4. APARTAMENTO 2 HABITACIONES
+             ================================================= -->
+        <section id="apartamento-2" class="tema">
+
+            <h2>
+                4. Apartamento de 2 habitaciones
+            </h2>
+
+            <p>
+                Consulte el video correspondiente al apartamento
+                de dos habitaciones.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="crNCFqyKifY">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/crNCFqyKifY?rel=0"
+                            title="Apartamento de 2 habitaciones"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 2 habitaciones
+                        </h3>
+
+                        <p>
+                            Ver apartamento
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             5. APARTAMENTO 3 HABITACIONES
+             ================================================= -->
+        <section id="apartamento-3" class="tema">
+
+            <h2>
+                5. Apartamento de 3 habitaciones
+            </h2>
+
+            <p>
+                Consulte los videos correspondientes a los
+                apartamentos de tres habitaciones.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="AW7amAduF2E">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/AW7amAduF2E?rel=0"
+                            title="Apartamento de 3 habitaciones - Video 1"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 3 habitaciones
+                        </h3>
+
+                        <p>
+                            Video 1
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="rdXB36EvPb8">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/rdXB36EvPb8?rel=0"
+                            title="Apartamento de 3 habitaciones - Video 2"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 3 habitaciones
+                        </h3>
+
+                        <p>
+                            Video 2 ·
+                            <a
+                                href="https://youtube.com/shorts/rdXB36EvPb8"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Ver en YouTube ↗
+                            </a>
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             6. APARTAMENTO 4 HABITACIONES
+             ================================================= -->
+        <section id="apartamento-4" class="tema">
+
+            <h2>
+                6. Apartamento de 4 habitaciones
+            </h2>
+
+            <p>
+                Consulte los videos correspondientes a los
+                apartamentos de cuatro habitaciones.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="wym4pzF58dw">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/wym4pzF58dw?rel=0"
+                            title="Apartamento de 4 habitaciones - Video 1"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 4 habitaciones
+                        </h3>
+
+                        <p>
+                            Video 1
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="HUm7oJIilBs">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/HUm7oJIilBs?rel=0"
+                            title="Apartamento de 4 habitaciones - Video 2"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Apartamento de 4 habitaciones
+                        </h3>
+
+                        <p>
+                            Video 2
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             7. PENT-HOUSE
+             ================================================= -->
+        <section id="penthouse" class="tema">
+
+            <h2>
+                7. Pent-house
+            </h2>
+
+            <p>
+                Consulte el video del Pent-house de Reserva del Mar.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="qVua2qhUG0E">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/qVua2qhUG0E?rel=0"
+                            title="Pent-house Reserva del Mar"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Pent-house
+                        </h3>
+
+                        <p>
+                            Reserva del Mar ·
+                            <a
+                                href="https://youtube.com/shorts/qVua2qhUG0E"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Ver en YouTube ↗
+                            </a>
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             8. SOL RADIANTE
+             ================================================= -->
+        <section id="sol-radiante" class="tema">
+
+            <h2>
+                8. Sol radiante
+            </h2>
+
+            <p>
+                El concepto de sol radiante forma parte de la
+                experiencia visual y turística asociada con
+                Santa Marta y el entorno de Reserva del Mar.
+            </p>
+
+            <div class="galeria-videos">
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="1iCFdHmPmH0">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/1iCFdHmPmH0?rel=0"
+                            title="Sol radiante"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Sol radiante
+                        </h3>
+
+                        <p>
+                            Reserva del Mar
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             9. EXPERIENCIA CARIBEÑA
+             ================================================= -->
+        <section id="experiencia-caribena" class="tema">
+
+            <h2>
+                9. Experiencia caribeña
+            </h2>
+
+            <p>
+                Videos relacionados con la experiencia caribeña
+                y el entorno turístico de Reserva del Mar.
+            </p>
+
+            <div class="galeria-videos">
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="_KM37beG0LA">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/_KM37beG0LA?rel=0"
+                            title="Experiencia caribeña"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
                             Experiencia caribeña
-                            · Video 3
-                        "
-                        loading="lazy"
-                        allow="
-                            accelerometer;
-                            autoplay;
-                            clipboard-write;
-                            encrypted-media;
-                            gyroscope;
-                            picture-in-picture;
-                            web-share
-                        "
-                        referrerpolicy="
-                            strict-origin-when-cross-origin
-                        "
-                        allowfullscreen
-                    >
-                    </iframe>
+                        </h3>
 
-                </div>
+                        <p>
+                            Video 1
+                        </p>
+
+                    </div>
+
+                </article>
 
 
-                <div class="video-info">
+                <article class="video-card">
 
-                    <h3>
-                        Experiencia caribeña
-                    </h3>
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="2r7CyYBTu-I">
 
-                    <p>
-                        Video 3
-                    </p>
+                        <iframe
+                            src="https://www.youtube.com/embed/2r7CyYBTu-I?rel=0"
+                            title="Experiencia caribeña - Video 2"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
 
-                </div>
+                    </div>
 
-            </article>
+                    <div class="video-info">
+
+                        <h3>
+                            Experiencia caribeña
+                        </h3>
+
+                        <p>
+                            Video 2 ·
+                            <a
+                                href="https://youtube.com/shorts/2r7CyYBTu-I"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Ver en YouTube ↗
+                            </a>
+                        </p>
+
+                    </div>
+
+                </article>
 
 
-        </div>
+                <article class="video-card">
 
-    </section>
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="2H6zIdodgD0">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/2H6zIdodgD0?rel=0"
+                            title="Experiencia caribeña - Video 3"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Experiencia caribeña
+                        </h3>
+
+                        <p>
+                            Video 3
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
 
 
-    <!-- =====================================================
-         INFORMACIÓN GENERAL
-         ===================================================== -->
+        <!-- =================================================
+             10. PLAYAS
+             ================================================= -->
+        <section id="playas" class="tema">
 
-    <section class="tema">
+            <h2>
+                10. Playas de arena blanca
+            </h2>
 
-        <h2>
-            Reserva del Mar · Santa Marta
-        </h2>
+            <p>
+                Video relacionado con las playas y la experiencia
+                de disfrutar el entorno del Caribe colombiano.
+            </p>
 
-        <p>
-            El Condominio Reserva del Mar está ubicado
-            en Playa Salguero, Santa Marta,
-            Magdalena, Colombia.
-        </p>
+            <div class="galeria-videos">
 
-        <p>
-            Una ubicación estratégica para disfrutar
-            del Caribe colombiano, las playas de Santa
-            Marta, actividades acuáticas, gastronomía,
-            naturaleza y cultura.
-        </p>
+                <article class="video-card">
 
-        <p>
-            Para información y reservas:
-        </p>
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="1iCFdHmPmH0">
 
-        <p>
+                        <iframe
+                            src="https://www.youtube.com/embed/1iCFdHmPmH0?rel=0"
+                            title="Experiencia de playa"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
 
-            <strong>
-                WhatsApp:
-            </strong>
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Experiencia de playa
+                        </h3>
+
+                        <p>
+                            Playas y entorno caribeño.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             11. AVENTURAS ACUÁTICAS
+             ================================================= -->
+        <section id="aventuras" class="tema">
+
+            <h2>
+                11. Aventuras acuáticas
+            </h2>
+
+            <p>
+                Consulte los videos relacionados con actividades
+                y experiencias acuáticas.
+            </p>
+
+            <div class="galeria-videos">
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="a-1fZjcx7Pc">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/a-1fZjcx7Pc?rel=0"
+                            title="Aventura acuática - Video 1"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Aventura acuática
+                        </h3>
+
+                        <p>
+                            Video 1
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <div
+                        class="video-contenedor"
+                        data-youtube-id="f7nOGDQLMf8">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/f7nOGDQLMf8?rel=0"
+                            title="Aventura acuática - Video 2"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            Aventura acuática
+                        </h3>
+
+                        <p>
+                            Video 2
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CANALES OFICIALES
+             ================================================= -->
+        <section class="activos-digitales">
+
+            <h2>
+                Encuéntranos en nuestros canales oficiales
+            </h2>
+
+            <p>
+                Consulta disponibilidad, precios y contenido del
+                Condominio Reserva del Mar en nuestros canales
+                autorizados.
+            </p>
+
+            <div class="grid-activos">
+
+
+                <a
+                    class="activo whatsapp"
+                    href="https://wa.me/573138902136"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        💬
+                    </span>
+
+                    <span>
+                        WhatsApp
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://reservadelmar.lovable.app/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        🌐
+                    </span>
+
+                    <span>
+                        Sitio web oficial
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://g.co/kgs/4WkkCu9"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        📍
+                    </span>
+
+                    <span>
+                        Google Business
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://www.youtube.com/watch?v=hIJQkULq0y8"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        ▶️
+                    </span>
+
+                    <span>
+                        YouTube
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://www.instagram.com/reservadelmar_santamarta/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        📷
+                    </span>
+
+                    <span>
+                        Instagram
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://www.tiktok.com/@reservadelmarsantamarta"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        🎵
+                    </span>
+
+                    <span>
+                        TikTok
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="activo"
+                    href="https://www.facebook.com/profile.php?id=100090692259424"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="activo-icono">
+                        👍
+                    </span>
+
+                    <span>
+                        Facebook
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMACIÓN FINAL
+             ================================================= -->
+        <section class="informacion-final">
+
+            <h2>
+                Condominio Reserva del Mar
+            </h2>
+
+            <p>
+                Playa Salguero, Santa Marta, Magdalena, Colombia.
+            </p>
+
+            <p>
+                Para consultar información adicional, visite
+                el sitio oficial:
+            </p>
 
             <a
-                href="https://wa.me/573138902136"
+                class="boton-sitio"
+                href="https://reservadelmar.lovable.app/"
                 target="_blank"
-                rel="noopener noreferrer"
-            >
-                +57 313 890 2136
+                rel="noopener noreferrer">
+
+                🌐 Visitar sitio oficial
+
             </a>
 
-        </p>
+        </section>
 
-    </section>
-
-
-</main>
+    </main>
 
 
-<!-- =========================================================
-     PIE DE PÁGINA
-     ========================================================= -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="pie-oficial">
 
-<footer>
 
-    <p>
-        <strong>
-            Condominio Reserva del Mar
-        </strong>
-    </p>
+        <div class="pie-cta">
 
-    <p>
-        Playa Salguero · Santa Marta ·
-        Caribe colombiano
-    </p>
+            <h2>
+                ¿Quieres conocer Reserva del Mar?
+            </h2>
 
-    <p>
+            <p>
+                Consulta disponibilidad y precios de los
+                apartamentos turísticos frente al mar en
+                Reserva del Mar, Playa Salguero.
+            </p>
 
-        <a
-            href="https://wa.me/573138902136"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            WhatsApp +57 313 890 2136
-        </a>
+            <div class="pie-cta-botones">
 
-    </p>
+                <a
+                    class="boton-video"
+                    href="https://wa.me/573138902136"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    <p>
-        © 2026 Condominio Reserva del Mar
-    </p>
+                    💬 Reservar por WhatsApp
 
-</footer>
+                </a>
 
+
+                <a
+                    class="boton-sitio"
+                    href="tel:+573138902136">
+
+                    📞 +57 313 890 2136
+
+                </a>
+
+            </div>
+
+            <p class="pie-cta-nota">
+                Atención personalizada · Información turística · Reservas
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             COLUMNAS
+             ================================================= -->
+        <div class="pie-columnas">
+
+
+            <div class="pie-columna">
+
+                <h3>
+                    Condominio Reserva del Mar
+                </h3>
+
+                <p>
+                    Reserva del Mar es un condominio de apartamentos
+                    turísticos ubicado en Playa Salguero, Santa Marta,
+                    dentro del Caribe colombiano.
+                </p>
+
+                <div class="pie-redes">
+
+                    <a
+                        href="https://wa.me/573138902136"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+                        💬
+                    </a>
+
+                    <a
+                        href="https://g.co/kgs/4WkkCu9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Google Business">
+                        📍
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/watch?v=hIJQkULq0y8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        ▶️
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/reservadelmar_santamarta/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        📷
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@reservadelmarsantamarta"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok">
+                        🎵
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100090692259424"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        👍
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="pie-columna">
+
+                <h3>
+                    Apartamentos turísticos
+                </h3>
+
+                <a href="#apartamento-1">
+                    Apartamentos para parejas
+                </a>
+
+                <a href="#apartamento-2">
+                    Apartamentos familiares
+                </a>
+
+                <a href="#penthouse">
+                    Apartamentos con vista al mar
+                </a>
+
+                <a href="#apartamento-4">
+                    Apartamentos para grupos
+                </a>
+
+                <a
+                    href="https://reservadelmar.lovable.app/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Alquiler vacacional Playa Salguero
+                </a>
+
+                <a
+                    href="https://reservadelmar.lovable.app/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Hospedaje frente al mar Santa Marta
+                </a>
+
+            </div>
+
+
+            <div class="pie-columna">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    📍 Calle 22 # 1-67, Playa Salguero,
+                    Santa Marta, Magdalena, Colombia
+                </p>
+
+                <p>
+                    📞 +57 313 890 2136
+                </p>
+
+                <p>
+                    ✉️ rminversionessc@gmail.com
+                </p>
+
+                <p>
+                    🤖 Asistente digital oficial:
+                    consulta apartamentos y reservas.
+                </p>
+
+                <a
+                    class="boton-video"
+                    href="https://wa.me/573138902136"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    💬 Consultar disponibilidad
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             INFORMACIÓN LEGAL
+             ================================================= -->
+        <div class="pie-legal">
+
+            <p>
+                © 2026 Condominio Reserva del Mar —
+                Apartamentos turísticos frente al mar
+                en Santa Marta, Colombia.
+            </p>
+
+            <p>
+                Evidencia académica
+                GA6-220501096-AA4-EV01 ·
+                Desarrollo Web · SENA 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BOTÓN FLOTANTE WHATSAPP
+         ===================================================== -->
+    <a
+        class="whatsapp-flotante"
+        href="https://wa.me/573138902136"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escribir por WhatsApp">
+
+        💬
+
+    </a>
+
+
+    <!-- =====================================================
+         JAVASCRIPT LOCAL
+         IMPORTANTE:
+         EL ARCHIVO REAL EN GITHUB ES script.js
+         ===================================================== -->
+    <script src="static/js/script.js"></script>
 
 </body>
+
 </html>
